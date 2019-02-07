@@ -2,15 +2,9 @@ package com.mlabboot;
 
 import com.mlabboot.groups.controller.GroupsController;
 import com.mlabboot.groups.domain.Groups;
-import com.mlabboot.groups.service.GroupsService;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.annotation.PostConstruct;
 

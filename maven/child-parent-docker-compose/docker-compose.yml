@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  maven-parent:
+    build: ./maven-parent
+    working_dir: /maven-parent
+    volumes:
+      - ./maven-parent:/maven-parent
+      - ~/.m2:/root/.m2
+    command: mvn clean install spring-boot:run
+
+  
+  maven-child:
+    build: ./maven-child
+    working_dir: /maven-child
+    volumes:
+      - ./maven-child:/maven-child
+      - ~/.m2:/root/.m2
+    command: mvn clean install spring-boot:run
+    ports:
+      - 8080:8080
+    depends_on:
+      - maven-parent
