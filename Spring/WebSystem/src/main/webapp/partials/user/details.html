@@ -1,0 +1,50 @@
+<!-- Show user profile -->
+<div class="row no-margin">
+    <h1>{{user.username}}</h1>
+</div>
+
+<div>
+    <h3 ng-show="user.id == undefined">New user</h3>
+    <h3 ng-show="user.id != undefined">Selected user</h3>
+    <form id="user-details-form" name="userDetailsForm" class="form-horizontal" role="form" ng-submit="save(user)">
+        
+        <div class="form-group" ng-show="user.id != undefined">
+            <div class="col-sm-10">
+                <span id="userId" name="ws_userId" ng-model="user.id"></span>
+            </div>
+        </div>
+        
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="username">Username</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="username" name="ws_username" placeholder="username" required
+                       ng-minlength="4"
+                       minlength="4"
+                       ng-maxlength="100"
+                       maxlength="100"
+                       removed-ng-pattern="/^[a-zA-Z\döäüÄÖÜß]*$/"
+                       removed-pattern=".{4,}[a-zA-Z\döäüÄÖÜß]*"
+                       ng-model="user.username"
+                       ng-disabled="user.id != undefined">
+            </div>
+        </div>
+		<div class="form-group">
+            <label class="control-label col-sm-2" for="ws_email_address">Email</label>
+            <div class="col-sm-10">
+                <input type="email" id="ws_email_address" name="ws_email_address" class="form-control" placeholder="Email"
+                	   required
+                	   ng-maxlength="100"
+                	   maxlength="100"
+                	   ng-model="user.email"
+                       title="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="update_user_button" class="btn btn-default" value="Save"
+                    ng-disabled="userDetailsForm.$pristine || userDetailsForm.$invalid">
+                <span>Save</span>
+            </button>
+            <input type="button" id="cancel_update_user_button" class="btn btn-danger" value="Cancel" ng-click="reload()" />
+        </div>
+    </form>
+</div>

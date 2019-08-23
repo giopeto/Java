@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ws" xmlns:ng="http://angularjs.org">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+        <link rel='stylesheet' type='text/css' href='resources/css/bootstrap/bootstrap.css' />
+        
+        <link rel='stylesheet' type='text/css' href='resources/css/bootstrap/bootstrap-theme.css' />
+        
+        <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+        
+	</head>
+	<body>
+		<div class="main-container">
+		    <div>
+                <div>
+		            <!-- Angular UI Router main container -->
+		            <div ui-view></div>
+		        </div>
+		    </div>
+		</div>
+
+		<!-- ** Angular ** -->
+        <script src="resources/js/lib/angular/angular.js"></script>
+		<script src="resources/js/lib/angular/angular-resource.js"></script>
+		<script src="resources/js/lib/angular/angular-cookies.js"></script>
+		<script src="resources/js/lib/angular/angular-ui-router.js"></script>
+        <script src="resources/js/lib/angular/ui-utils/ui-utils.js"></script>
+        <script src="resources/js/lib/angular/ui-utils/ui-utils-ieshiv.js"></script>
+        <script src="resources/js/lib/angular/translate/angular-translate.js"></script>
+        <script src="resources/js/lib/angular/translate/angular-translate-loader-url.js"></script>
+        
+		<!-- ** Angular UI Bootstrap ** -->
+        <script src="resources/js/lib/angular/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+        <!-- ** Others ** -->
+        <script src="resources/js/lib/utils/underscore.js"></script>
+        
+		<script src="resources/js/lib/moment-with-locales.js"></script>
+        
+        <script src="resources/js/ws.js"></script>
+
+		<script src="resources/js/custom/common/stateConfig.js"></script>
+		<script src="resources/js/custom/common/httpConfig.js"></script>
+
+		<script src="resources/js/custom/user/services/UserSrv.js"></script>
+
+        <script src="resources/js/custom/user/controllers/UsersCtrl.js"></script>
+        <script src="resources/js/custom/user/controllers/UserDashboardCtrl.js"></script>
+        <script src="resources/js/custom/user/controllers/UserDetailCtrl.js"></script>
+		        
+	</body>
+</html>
