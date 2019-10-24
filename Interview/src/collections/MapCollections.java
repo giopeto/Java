@@ -11,23 +11,29 @@ public class MapCollections {
         // Values are not unique
 
         Map<Integer, Integer> hash = new HashMap(); // no order
-        Map<Integer, Integer> tree = new TreeMap<>(); // natural order
         Map<Integer, Integer> linked = new LinkedHashMap<>(); // insertion order
+        Map<Integer, Integer> tree = new TreeMap<>(); // natural order
 
-        addToMap(hash);
-        addToMap(tree);
-        addToMap(linked);
+        addToMap(hash, "HashMap");
+        addToMap(linked, "LinkedHashMap");
+        addToMap(tree, "TreeMap");
+
+
+        String s1 = "Test";
+        String s2 = "Test";
 
     }
 
 
-    public static void addToMap(Map map) {
+    public static void addToMap(Map map, String type) {
+        map.put(250, 2.5);
         map.put(100, 1);
         map.put(200, 2);
         map.put(400, 3);
         map.put(300, 4);
 
+        map.put(200, 2000);
 
-        System.out.println(map);
+        System.out.println(map + " " + type);
     }
 }

@@ -1,6 +1,6 @@
 package immutableobject;
 
-public class Money {
+public final class Money {
 
     private final double amount;
     private final Currency currency;

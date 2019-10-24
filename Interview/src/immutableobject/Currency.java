@@ -1,6 +1,6 @@
 package immutableobject;
 
-public class Currency {
+public final class Currency {
 
     private final String name;
 

@@ -10,26 +10,32 @@ public class SetCollections {
 
     public static void main(String[] args) {
 
-        Set<Integer> hash = new HashSet<>();
-        Set<Integer> tree = new TreeSet<>();
-        Set<Integer> linked = new LinkedHashSet<>();
+        // Duplicates are not allowed
+        // Not ordered collection, except:
+                    // LinkedHashSet which maintain insertion order
+                    // TreeSet which maintain natural order
 
-        addToSet(hash);
-        addToSet(tree);
-        addToSet(linked);
+
+        Set<Integer> hash = new HashSet<>(); // no order
+        Set<Integer> linked = new LinkedHashSet<>(); // insertion order
+        Set<Integer> tree = new TreeSet<>(); // natural order
+
+        addToSet(hash, "HashSet");
+        addToSet(linked, "LinkedHashSet");
+        addToSet(tree, "TreeSet");
 
     }
 
 
-    public static void addToSet(Set set) {
+    public static void addToSet(Set set, String type) {
         set.add(8);
         set.add(2);
-        set.add(1);
+        set.add(100);
         set.add(5);
 
         set.add(2);
 
-        System.out.println(set);
+        System.out.println(set + " " + type);
     }
 
 }

@@ -9,6 +9,7 @@ public class WhileAndDoWhile {
 
     private static void testDoWhile(int x) {
 
+        System.out.println("testDoWhile");
         do{
           x++ ;
           System.out.println(x);
@@ -17,9 +18,10 @@ public class WhileAndDoWhile {
 
     private static void testWhile(int x) {
 
+        System.out.println("testWhile");
         while(x < 20) {
-            System.out.println("X: " + x);
             x++;
+            System.out.println("X: " + x);
         }
     }
 }
