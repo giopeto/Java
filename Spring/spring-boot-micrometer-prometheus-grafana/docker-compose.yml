@@ -1,0 +1,18 @@
+version: "3"
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+    - ./docker/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+    - 9090:9090
+  grafana2:
+    image: grafana/grafana
+    ports:
+    - 3000:3000
+    volumes:
+    - ./docker/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+    - ./docker/grafana-dashboards.yml:/etc/grafana/provisioning/dashboards/grafana-dashboards.yml
+    - ./docker/grafana-dashboards:/var/lib/grafana/dashboards
+    depends_on:
+    - prometheus
