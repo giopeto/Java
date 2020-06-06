@@ -183,7 +183,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>3.0.7.RELEASE</version>
+			<version>5.2.6.RELEASE</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -217,7 +217,7 @@
 		</plugins>
 	</build>
 	<properties>
-		<spring.version>3.0.7.RELEASE</spring.version>
+		<spring.version>5.2.6.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 </project>
